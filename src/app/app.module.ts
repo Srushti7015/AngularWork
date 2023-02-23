@@ -5,9 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { BookFlightComponent } from './book-flight/book-flight.component';
-import { ViewScheduledFlightComponent } from './view-scheduled-flight/view-scheduled-flight.component';
 
-import { HistoryComponent } from './history/history.component';
 import { AboutUsComponent } from './about-us/about-us.component';
 import { UserComponent } from './user/user.component';
 import { FlightReviewComponent } from './flight-review/flight-review.component';
@@ -15,12 +13,20 @@ import { RouterModule, Routes } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { FlightDetailsComponent } from './flight-details/flight-details.component';
+import { AddFlightComponent } from './add-flight/add-flight.component';
+import { AllFlightsComponent } from './all-flights/all-flights.component';
+import { MyBookingsComponent } from './my-bookings/my-bookings.component';
+
 
 const allLinks:Routes=[
+  {path:'registerFlight',component:AddFlightComponent},
+  {path:'view',component:AllFlightsComponent},
+  {path:'add-flight',component:AddFlightComponent},
   {path:'book-flight',component:BookFlightComponent},
-  {path:'view-scheduled-flight',component:ViewScheduledFlightComponent},
+  {path:'all-flights',component:AllFlightsComponent},
   {path:'flight-details',component:FlightDetailsComponent},
-  {path:'history',component:HistoryComponent},
+  
+  {path:'my-bookings',component:MyBookingsComponent},
   {path:'about-us',component:AboutUsComponent},
 ]
 
@@ -29,12 +35,16 @@ const allLinks:Routes=[
     AppComponent,
     HeaderComponent,
     BookFlightComponent,
-    ViewScheduledFlightComponent,
-    HistoryComponent,
+   
     AboutUsComponent,
     UserComponent,
     FlightReviewComponent,
-    FlightDetailsComponent
+    FlightDetailsComponent,
+   
+    AddFlightComponent,
+    AllFlightsComponent,
+    MyBookingsComponent,
+    
   ],
   imports: [
     BrowserModule,

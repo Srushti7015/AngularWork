@@ -1,0 +1,25 @@
+<p>my-bookings works! with add review button</p>
+<h4>By Destination Airport</h4>
+<input type="text" #destinationAirport>
+<button (click)="getBooking(destinationAirport.value)">Load Booking</button>
+
+<h4>By Date Of Booking</h4>
+<input type="text" #dateOfBooking>
+<button (click)="getBooking1(dateOfBooking.value)">Load Booking</button>
+
+<h4>Booking By time</h4>
+<input type="text" #timeOfBooking>
+<button (click)="getBooking2(timeOfBooking.value)">Load Booking</button>
+
+
+
+<h2>All Bookings List</h2>
+<div *ngFor="let b of allBooking">
+    <table>
+            <tr>Time Of Booking : {{b.timeOfBooking}}</tr>
+            <tr>Date Of Booking : {{b.dateOfBooking}}</tr>
+            <tr>Source  Airport : {{b.sourceAirport}}</tr>
+            <tr>Destination Airport:{{b.destinationAirport}}</tr>
+            <hr/>
+    </table>
+</div>

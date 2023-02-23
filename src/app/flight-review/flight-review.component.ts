@@ -29,6 +29,7 @@ export class FlightReviewComponent {
 
       },
       error=>{
+        console.log(error);
 
       }
 

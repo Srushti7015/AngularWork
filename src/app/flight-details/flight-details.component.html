@@ -1,1 +1,30 @@
-<p>flight-details works!</p>
+<p>flight-details works! add star ratings</p>
+
+<img src="/assets/images/{{f.imageName}}" alt="Emirates flight image" width="120px" height="150px">
+<h2 style="color: rgb(199, 145, 145); font-style: italic;">{{f.carrierName}} </h2>
+<table>
+    <tr>
+        <!-- <app-tdfflight-page></app-tdfflight-page>  -->
+        
+        <td> 
+            
+            <p> {{f.about}} </p>
+            <hr/>
+            <span>Ticket Price <span>{{f.price|currency}}    </span>  
+                <i *ngIf="f.discount>0"> 
+                    with {{f.discount}}% Off 
+                    <span *ngIf="f.discount>9">
+                        <b style="color: blue; font-family: Georgia, 'Times New Roman', Times, serif;"><u> Recommended</u></b>
+                    </span>
+                </i> 
+        
+            </span> 
+            <br/>
+            Flight Duration {{f.duration}} Hours
+           
+            
+        </td>
+        
+        
+    </tr>
+</table>
