@@ -16,6 +16,9 @@ import { FlightDetailsComponent } from './flight-details/flight-details.componen
 import { AddFlightComponent } from './add-flight/add-flight.component';
 import { AllFlightsComponent } from './all-flights/all-flights.component';
 import { MyBookingsComponent } from './my-bookings/my-bookings.component';
+import { Page1Component } from './page1/page1.component';
+import { Page2Component } from './page2/page2.component';
+import { Page3Component } from './page3/page3.component';
 
 
 const allLinks:Routes=[
@@ -44,6 +47,9 @@ const allLinks:Routes=[
     AddFlightComponent,
     AllFlightsComponent,
     MyBookingsComponent,
+    Page1Component,
+    Page2Component,
+    Page3Component,
     
   ],
   imports: [

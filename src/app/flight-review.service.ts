@@ -12,6 +12,7 @@ export class FlightReviewService {
   baseURL:string = 'http://localhost:9090';
   submitReviewEndPoint:string=this.baseURL+'/app/review';
   ReviewByFlightIdEndPoint:string=this.baseURL+'/app/by';
+  RatingsByFlightIdEndPoint:string=this.baseURL+'/app/';
   //localhost:9090/app/by/11
   
   
@@ -30,9 +31,11 @@ export class FlightReviewService {
    }
 
 
-   getRatingsByFlightId(filterReviewbyrating:number):FlightReview[]
+   getRatingsByFlightId(filterReviewbyrating:number):Observable<FlightReview>
    {
-    return[];
+    console.log("inside method 1 : Review added" +filterReviewbyrating);
+    
+    return this.http.post<FlightReview>(`${this.RatingsByFlightIdEndPoint}`,filterReviewbyrating);
    }
    submitFlightReview(flightReview: FlightReview):Observable<FlightReview> {
 
